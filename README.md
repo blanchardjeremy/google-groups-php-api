@@ -25,22 +25,22 @@ Potential future features include
 
   * Add example.php to demonstrate how the API can be used.
   * Maintain a session between requests using cookies
-  * Create a new group
   * Modify member settings
   * Modify group settings
+    * Have "presets" for quickly switching between public, private, and semi-private.
   * Retrieve URL for RSS feed of group
-  * Complete esting suite
   * Better error checking
+  * Create a group and pass the CAPTCHA through to the user of the API.
 
 
 Legal
 -----
-To my best, non-professional of the [Google Groups Terms of Service](http://groups.google.com/googlegroups/terms_of_service.html), I think that is permissible to use this API. That said, using the library to force-add users to a group for the purposes of SPAM.
+To my best (non-professional) of the [Google Groups Terms of Service](http://groups.google.com/googlegroups/terms_of_service.html), I think that is permissible to use this API. That said, using the library to force-add users to a group for the purposes of SPAM.
 
 
 License
 -------
-This code is available under GPLv2.
+This code is available under GPL v2.
 
 Development
 -----------
