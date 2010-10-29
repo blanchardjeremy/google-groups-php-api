@@ -8,20 +8,25 @@ class TestOfGoogleGroupsAPI extends WebTestCase {
   var $login_email;
   var $login_password;
 
+  var $group_shortname;
+  var $group_url;
+
   const DUMMY_MEMBER = 'ggphpapi+dummy@gmail.com';
 
-  const GROUP_SHORTNAME = 'ggphpapi-test';
-  const GROUP_URL = 'http://groups.google.com/group/ggphpapi-test';
-
   function __construct() {
-    require_once(dirname(__FILE__).'/../../google-groups-php-api.php');
-    require_once(dirname(__FILE__).'/../util.php');
+    require_once(dirname(__FILE__) .'/../google-groups-php-api.php');
+    require_once(dirname(__FILE__) .'/../dev/util.php');
 
-    // Should set the $login_email and $login_password
-    require_once(dirname(__FILE__).'/test_config.php');
+    // Should set the $login_email, $login_password, and $test_group
+    require_once(dirname(__FILE__) .'/test_config.php');
+    $this->login_email = $login_email;
+    $this->login_password = $login_password;
+    $this->group_shortname = $test_group;
+
+    $this->group_url = 'http://groups.google.com/group/'. $this->group_shortname;
 
     $this->gg = new GoogleGroupsAPI();
-    $this->gg->setGroup(self::GROUP_SHORTNAME);
+    $this->gg->setGroup($this->group_shortname);
     $this->random_email = $this->_getRandomEmail();
   }
 
@@ -37,7 +42,7 @@ class TestOfGoogleGroupsAPI extends WebTestCase {
   }
 
   function _getRandomEmail() {
-    return 'ggphpapi+'. mt_rand(1000, 9999) . '@gmail.com';
+    return 'ggphpapi+'. mt_rand(1000, 9999) .'@gmail.com';
   }
 
   function testLogin() {
@@ -45,7 +50,7 @@ class TestOfGoogleGroupsAPI extends WebTestCase {
 
     $this->_fixBrowser();
 
-    $page = $this->get(self::GROUP_URL.'/manage_members_add');
+    $page = $this->get($this->group_url .'/manage_members_add');
     //echo $page; die('here');
     $this->assertText('Please use this feature carefully', 'Succesfully logged in with owner or manager access.');
   }
@@ -55,9 +60,9 @@ class TestOfGoogleGroupsAPI extends WebTestCase {
 
     $this->_fixBrowser();
 
-    $page = $this->get(self::GROUP_URL .'/manage_members');
+    $page = $this->get($this->group_url .'/manage_members');
     //echo $page; die();
-    $this->assertText($this->random_email, 'User successfully added! Email: '. $this->random_email);
+    $this->assertText($this->random_email, 'Member successfully added! Email: '. $this->random_email);
   }
 
   function testUnsubscribe() {
@@ -65,8 +70,8 @@ class TestOfGoogleGroupsAPI extends WebTestCase {
 
     $this->_fixBrowser();
 
-    $page = $this->get(self::GROUP_URL .'/manage_members');
+    $page = $this->get($this->group_url .'/manage_members');
     //echo $page; die();
-    $this->assertNoText($this->random_email, 'User successfully removed! Email: '. $this->random_email);
+    $this->assertNoText($this->random_email, 'Member successfully removed! Email: '. $this->random_email);
   }
 }

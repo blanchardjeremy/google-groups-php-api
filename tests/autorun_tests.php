@@ -1,7 +1,7 @@
 <?php
 
-require_once('../../simpletest/autorun.php');
-require_once('../../simpletest/web_tester.php');
+require_once('../simpletest/autorun.php');
+require_once('../simpletest/web_tester.php');
 //SimpleTest::prefer(new TextReporter());
 
 class WebTests extends TestSuite {
