@@ -2,10 +2,11 @@
 
 Introduction
 ------------
-This library gives programatic access to Google Groups from PHP. It does so by emulating a user's interaction with a browser (AKA "a bot" or "screen scraping").
+This library gives programatic access to Google Groups from PHP. It does so by emulating a user's interaction with a browser (AKA "a bot" or "screen scraping"). I can be thought of as a faux-API.
 
 If you would like to encourage Google to create a real API, post in this thread (or "star it"): [Groups API](http://code.google.com/p/gdata-issues/issues/detail?id=27).
 
+**NOTE:** This library comes with no gaurentee of service. If Google changes the format of pages or any form submission process, this library may cease to function.
 
 Features
 --------
@@ -19,7 +20,7 @@ Initial features include:
 TODO
 ----
 Potential future features include
-  
+
   * Create a new group
   * Modify member settings
   * Modify group settings
@@ -38,4 +39,3 @@ Development
 This library may not see a stable release for some months. Currently, development is being done as a proof-of-concept. Use at your own risk.
 
 Written by Jeremy Blanchard from [Activism Labs](http://activismlabs.org).
-
