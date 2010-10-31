@@ -42,6 +42,11 @@ View examples of this script in the exmaples directory.
   * create_group_example.php - Demonstrates how to complete the 3 step process for creating a group and showing the CAPTCHA to a user.
 
 
+Bugs and Feature Requests
+-------------------------
+Please submit bug reports and feature requests at the [GGPHPAPI GitHub project page](http://github.com/auzigog/google-groups-php-api/issues).
+
+
 Legal
 -----
 To my best (non-professional) of the [Google Groups Terms of Service](http://groups.google.com/googlegroups/terms_of_service.html), I think that is permissible to use this API. That said, using the library to force-add users to a group for the purposes of SPAM.
