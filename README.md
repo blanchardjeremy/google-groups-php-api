@@ -23,15 +23,16 @@ TODO
 ----
 Potential future features include
 
-  * Add example.php to demonstrate how the API can be used.
+  * Remove any page requests before forms that don't set cookies and just submit the form directly
+  * Add example.php to demonstrate how the API can be used
   * Maintain a session between requests using cookies
   * Modify member settings
   * Modify group settings
-    * Have "presets" for quickly switching between public, private, and semi-private.
+    * Have "presets" for quickly switching between public, private, and semi-private
   * Retrieve URL for RSS feed of group
   * Better error checking
-  * Create a group and pass the CAPTCHA through to the user of the API.
-
+  * Create a group and pass the CAPTCHA through to the user of the API
+  * Work with international Google Groups URLs
 
 Legal
 -----
