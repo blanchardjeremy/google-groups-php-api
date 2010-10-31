@@ -34,6 +34,14 @@ Potential future features include
   * Create a group and pass the CAPTCHA through to the user of the API
   * Work with international Google Groups URLs
 
+
+Examples
+--------
+View examples of this script in the exmaples directory.
+
+  * create_group_example.php - Demonstrates how to complete the 3 step process for creating a group and showing the CAPTCHA to a user.
+
+
 Legal
 -----
 To my best (non-professional) of the [Google Groups Terms of Service](http://groups.google.com/googlegroups/terms_of_service.html), I think that is permissible to use this API. That said, using the library to force-add users to a group for the purposes of SPAM.
