@@ -15,7 +15,6 @@ class TestOfGoogleGroupsAPI extends WebTestCase {
 
   function __construct() {
     require_once(dirname(__FILE__) .'/../google-groups-php-api.php');
-    require_once(dirname(__FILE__) .'/../dev/util.php');
 
     // Should set the $login_email, $login_password, and $test_group
     require_once(dirname(__FILE__) .'/test_config.php');
