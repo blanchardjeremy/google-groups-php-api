@@ -1,6 +1,5 @@
 <?php
 /**
- * @author Jeremy Blanchard (auzigog) <auzigog@gmail.com>
  * @version dev1
  *
  * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License, version 2
